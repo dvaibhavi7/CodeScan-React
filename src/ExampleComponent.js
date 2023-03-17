@@ -18,6 +18,7 @@ export default class ExampleComponent extends Component {
   }
 
   render() {
+    console.log('hi')
     return (
       <div>
         <button onClick={this.handleClick}>Click me!</button>
