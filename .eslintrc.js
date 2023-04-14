@@ -22,6 +22,7 @@ module.exports = {
       'no-empty': 'warn',
       'no-extra-semi': 'warn',
       'no-unreachable': 'warn',
-      'no-console': 'warn'
+      'no-console': 'warn',
+      'example-rule': ['error', { 'word': 'vhd_api_key' }]
     }
   };
