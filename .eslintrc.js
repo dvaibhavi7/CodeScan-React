@@ -15,7 +15,7 @@ module.exports = {
       }
     },
     plugins: [
-        'example-plugin'
+        './eslint-plugin-example-plugin'
     ],
     rules: {
       'no-unused-vars': ['warn', { 'args': 'none' }],
