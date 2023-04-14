@@ -26,6 +26,6 @@ module.exports = {
       'no-extra-semi': 'warn',
       'no-unreachable': 'warn',
       'no-console': 'warn',
-      'example-rule': 'error'
+      'example-plugin/example-rule': 'error'
     }
   };
