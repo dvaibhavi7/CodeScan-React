@@ -1,24 +1,27 @@
 module.exports = {
-  meta: {
-    type: 'problem',
-    docs: {
-      description: 'Disallow the use of the word "vhd_api_key" in your code',
-      category: 'Best Practices',
-      recommended: true
+  rules: {
+    'example-rule': {
+      meta: {
+        docs: {
+          description: 'Scan for the word "vhd_api_key"',
+          category: 'Best Practices',
+          recommended: false,
+        },
+        fixable: null,
+        schema: [],
+      },
+      create: function (context) {
+        return {
+          Literal(node) {
+            if (typeof node.value === 'string' && node.value.includes('vhd_api_key')) {
+              context.report({
+                node,
+                message: 'Avoid using the word "vhd_api_key"',
+              });
+            }
+          },
+        };
+      },
     },
-    fixable: null,
-    schema: []
   },
-  create: function(context) {
-    return {
-      Identifier: function(node) {
-        if (node.name === 'vhd_api_key') {
-          context.report({
-            node: node,
-            message: 'Avoid using the word "vhd_api_key" in your code.'
-          });
-        }
-      }
-    };
-  }
 };
