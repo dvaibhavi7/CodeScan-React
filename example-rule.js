@@ -1,3 +1,4 @@
+console.log('example-rule.js loaded');
 module.exports = {
   rules: {
     'example-rule': {
