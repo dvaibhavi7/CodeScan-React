@@ -14,6 +14,9 @@ module.exports = {
         jsx: true
       }
     },
+    plugins: [
+        'example-plugin'
+    ],
     rules: {
       'no-unused-vars': ['warn', { 'args': 'none' }],
       'no-dupe-keys': 'warn',
