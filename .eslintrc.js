@@ -14,9 +14,6 @@ module.exports = {
         jsx: true
       }
     },
-    plugins: [
-        'example-plugin'
-    ],
     rules: {
       'no-unused-vars': ['warn', { 'args': 'none' }],
       'no-dupe-keys': 'warn',
@@ -26,6 +23,6 @@ module.exports = {
       'no-extra-semi': 'warn',
       'no-unreachable': 'warn',
       'no-console': 'warn',
-      'example-plugin/example-rule': 'error'
+      'no-secrets': ['error', { 'patterns': ['password', 'api_key', 'secret'] }]
     }
   };
